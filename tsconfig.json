@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"module": "ES2022",
+		"target": "ES2022",
+		"moduleResolution": "bundler",
+		"lib": ["ES2022"],
+
+		"sourceMap": true,
+		"importHelpers": true,
+		"resolveJsonModule": true,
+
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": false,
+		"noPropertyAccessFromIndexSignature": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"node_modules/@nodecg/types/augment-window.d.ts"
+	]
+}

@@ -1,0 +1,70 @@
+{
+	"name": "nodecg-bundle-template",
+	"version": "1.0.0",
+	"packageManager": "pnpm@12.4.0",
+	"scripts": {
+		"start": "nodecg start",
+		"build": "vite build",
+		"dev": "run-p dev:*",
+		"dev:tsc": "tsc -b src/browser src/extension -w --preserveWatchOutput",
+		"dev:vite": "vite",
+		"dev:nodecg": "nodecg start",
+		"generate-schema-types": "nodecg schema-types -o ./src/types/generated",
+		"clean": "trash node_modules/.cache && trash dashboard && trash extension",
+		"typecheck": "tsc -p src/browser && tsc -p src/extension",
+		"format": "biome check --write",
+		"dev:format": "biome check --write --unsafe"
+	},
+	"nodecg": {
+		"compatibleRange": "^2.5.0",
+		"assetCategories": [
+			{
+				"name": "test",
+				"title": "Test",
+				"allowedTypes": ["jpg", "jpeg", "gif", "png"]
+			}
+		],
+		"dashboardPanels": [
+			{
+				"name": "Example",
+				"title": "Example Dashboard",
+				"width": 2,
+				"file": "Example.html",
+				"workspace": "Example",
+				"headerColor": "#525F78"
+			}
+		],
+		"graphics": [
+			{
+				"file": "Example.html",
+				"width": 1920,
+				"height": 1080,
+				"singleInstance": true
+			}
+		]
+	},
+	"devDependencies": {
+		"@nodecg/types": "^2.8.0",
+		"@types/obs-studio": "^2.17.2",
+		"@types/react": "^18.3.31",
+		"@types/react-dom": "^18.3.7",
+		"@vitejs/plugin-react": "^6.1.1",
+		"globby": "^14.1.0",
+		"npm-run-all": "^4.1.5",
+		"rollup": "^4.63.1",
+		"rollup-plugin-esbuild": "^6.2.1",
+		"rollup-plugin-node-externals": "^7.1.3",
+		"trash-cli": "^6.0.0",
+		"typescript": "^5.9.3",
+		"vite": "^8.2.2"
+	},
+	"dependencies": {
+		"@biomejs/biome": "^2.5.12",
+		"@mdi/react": "^1.6.1",
+		"@nodecg/react-hooks": "^1.0.3",
+		"nodecg": "^2.8.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"tslib": "^2.8.1"
+	}
+}
