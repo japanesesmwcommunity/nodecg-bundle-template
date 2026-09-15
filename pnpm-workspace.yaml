@@ -4,3 +4,4 @@ allowBuilds:
   better-sqlite3: true
   esbuild: true
   msgpackr-extract: false
+minimumReleaseAge: 10080
