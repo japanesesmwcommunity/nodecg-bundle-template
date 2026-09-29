@@ -5,7 +5,7 @@
 		"lib": ["ES2022", "DOM"],
 		"jsx": "react-jsx",
 		"noEmit": true,
-		"types": ["vite/client", "nodecg/types/augment-window", "obs-studio"]
+		"types": ["vite/client", "nodecg/types/augment-window"]
 	},
 	"include": ["./**/*.ts", "./**/*.tsx", "../types/**/*.d.ts"]
 }
